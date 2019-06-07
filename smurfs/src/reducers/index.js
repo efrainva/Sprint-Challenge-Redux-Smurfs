@@ -38,8 +38,8 @@ const reducers = (state = initialState, action) => {
 
     case GRABBING_INFO_SUCC:
       console.log(action.payload,'re');
-      return{...state
-        // smurfs:[state.smurfs,...action.payload],
+      return{...state,
+        smurfs:[state.smurfs,...action.payload],
         // fetchingSmurfs:false
         }
 
