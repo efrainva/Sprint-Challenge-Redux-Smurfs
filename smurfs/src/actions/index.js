@@ -21,11 +21,13 @@ export const GRABBING_INFO_FAIL = 'GABBING_INFO_FAIL';
    D - deleteSmurf
 */
 
-export const getInfo = ( ) => dispatch =>{
+export const getInfo = ( ) => {
+return dispatch =>{
+
   dispatch({type:GRABBING_INFO});
   axios 
   .get("http://localhost:3333/smurfs")
-  .then(({response}) => {
+  .then((response) => {
     dispatch({
       type:GRABBING_INFO_SUCC,
       payload:response.data
@@ -41,5 +43,6 @@ export const getInfo = ( ) => dispatch =>{
 })
 }
 
+}
 console.log(getInfo())
 
